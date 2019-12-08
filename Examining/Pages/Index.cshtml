@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Đăng Nhập";
+}
+ 
+<div>@ViewData["user"]</div>
+@if(HttpContext.User.Identity.IsAuthenticated)
+{
+    <p>@HttpContext.User.Identity.Name</p>
+    
+}
+else
+{
+    <p>xyz</p>
+}
+<p>hello everybody</p>
